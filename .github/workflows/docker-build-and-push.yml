@@ -39,6 +39,6 @@ jobs:
           build-args:
             USERNAME=${{ vars.DOCKERHUB_USERNAME }}
           context: "php/8.4.1/alpine3.21"
-          file: "php/8.4.1/alpine3.21/rr-ci.Dockerfile"
+          file: "php/8.4.1/alpine3.21/rr-dev.Dockerfile"
           push: true
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/php:8.4.1-rr-ci
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/php:8.4.1-rr-dev
