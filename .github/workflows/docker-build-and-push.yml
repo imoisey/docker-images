@@ -30,6 +30,7 @@ jobs:
         with:
           context: "php/8.4.1/alpine3.21"
           file: "php/8.4.1/alpine3.21/rr.Dockerfile"
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/php:8.4.1-rr,${{ vars.DOCKERHUB_USERNAME }}/php:latest
 
@@ -40,5 +41,6 @@ jobs:
             USERNAME=${{ vars.DOCKERHUB_USERNAME }}
           context: "php/8.4.1/alpine3.21"
           file: "php/8.4.1/alpine3.21/rr-dev.Dockerfile"
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/php:8.4.1-rr-dev
